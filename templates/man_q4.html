@@ -1,0 +1,29 @@
+﻿<html>
+  <head>
+    <title>CupidForSolo</title>
+    <style type = 'text/css'>
+    .box{border-style:solid; width:600px; height:310px;}
+    #dashbox{background:white; margin:0px; padding:15px; border-width:5px; border-color:A61458; margin:auto;}
+    @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);  
+    .myfont {font-family: 'Hanna', sans-serif; font-size: 24px; line-height:30px;}
+    </style>
+  </head>
+  <body bgcolor = 'F5FCF4' class = myfont>
+    <center><img src = {{ url_for('static', filename = 'cupid_logo.png') }} width = 500 height = 150 alt = 'logo'></center>
+    <div class = "box" id = "dashbox">
+    {% if drowsiness >= 4 %}
+      <b>밤새 게임이라도 한걸까요~? 하하<b><br>
+    {% elif drowsiness <= 2 %}
+      <b>수업 중에 졸지 않는다니 대단하네요!<b><br>
+    {% endif %}
+    <b>그렇다면, 수업이 끝났을 때 바로 강의실을 나가는 편인가요?<b><br><br>
+    <form action = "/man/q5" method = post>
+      <input type = 'radio' name = after value = 0 checked><font size = 2.5 style = "line-height:20px;">&ensp;아니요, 천천히 있다 나가는 편이에요.<br><br></font>
+      <input type = 'radio' name = after value = 1> <font size = 2.5 style = "line-height:20px;">네, 바로 강의실을 나갑니다.<br><br></font>
+    <br>   
+    <input type = submit value = "대답하기">
+    </form>
+    <au><font size = 1.5 face = '맑은고딕'><b>MADE BY 가천대 응용통계학과 KYT</b></font></au>
+    </div>
+  </body>       
+</html>

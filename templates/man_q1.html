@@ -1,0 +1,26 @@
+﻿<html>
+  <head>
+    <title>CupidForSolo</title>
+    <style type = 'text/css'>
+    .box{border-style:solid; width:600px; height:350px;}
+    #dashbox{background:white; margin:0px; padding:15px; border-width:5px; border-color:A61458; margin:auto;}
+    @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);  
+    .myfont {font-family: 'Hanna', sans-serif; font-size: 24px; line-height:30px;}
+    </style>
+  </head>
+  <body bgcolor = 'F5FCF4' class = myfont>
+    <center><img src = {{ url_for('static', filename = 'cupid_logo.png') }} width = 500 height = 150 alt = 'logo'></center>
+    <div class = "box" id = "dashbox">
+    <b>그 대상은 지금 몇 학년인가요?<b><br><br>
+    <form action = "/man/q2" method = post>
+      <input type = 'radio' name = grade value = 1 checked><font size = 2.5 style = "line-height:20px;">&ensp;1학년<br><br></font>
+      <input type = 'radio' name = grade value = 2> <font size = 2.5 style = "line-height:20px;">2학년<br><br></font>
+      <input type = 'radio' name = grade value = 3> <font size = 2.5 style = "line-height:20px;">3학년<br><br></font>
+      <input type = 'radio' name = grade value = 4> <font size = 2.5 style = "line-height:20px;">4학년<br><br></font>
+    <br>   
+    <input type = submit value = "대답하기">
+    </form>
+    <au><font size = 1.5 face = '맑은고딕'><b>MADE BY 가천대 응용통계학과 KYT</b></font></au>
+    </div>
+  </body>       
+</html>

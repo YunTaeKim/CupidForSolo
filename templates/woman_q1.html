@@ -1,0 +1,24 @@
+﻿<html>
+  <head>
+    <title>CupidForSolo</title>
+    <style type = 'text/css'>
+    .box{border-style:solid; width:600px; height:245px;}
+    #dashbox{background:white; margin:0px; padding:15px; border-width:5px; border-color:A61458; margin:auto;}
+    @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);  
+    .myfont {font-family: 'Hanna', sans-serif; font-size: 24px; line-height:30px;}
+    </style>
+  </head>
+  <body bgcolor = 'F5FCF4' class = myfont>
+    <center><img src = {{ url_for('static', filename = 'cupid_logo.png') }} width = 500 height = 150 alt = 'logo'></center>
+    <div class = "box" id = "dashbox">
+    <b>혹시 그녀가 수업 도중 강의실을 나간 적이 있나요?<b><br><br>
+    <form action = "/woman/q2" method = post>
+      <input type = 'radio' name = exit value = 1 checked><font size = 2.5 style = "line-height:20px;">&ensp;아니요, 강의 중에는 나간 적 없어요.<br><br></font>
+      <input type = 'radio' name = exit value = 0> <font size = 2.5 style = "line-height:20px;">네, 강의 도중 나갔다 온 적이 있어요.<br><br></font>
+    <br>   
+    <input type = submit value = "대답하기">
+    </form>
+    <au><font size = 1.5 face = '맑은고딕'><b>MADE BY 가천대 응용통계학과 KYT</b></font></au>
+    </div>
+  </body>       
+</html>

@@ -1,0 +1,30 @@
+﻿<html>
+  <head>
+    <meta charset="UTF-8">
+    {% if sex == 'man' %}
+      <meta http-equiv="refresh" content = "2.5; url = /man/result">
+    {% elif sex == 'woman' %}
+      <meta http-equiv="refresh" content = "2.5; url = /woman/result">
+    {% endif %}
+    <title>CupidForSolo</title>
+    <style> 
+    body {
+      margin:0;
+      background:'F5FCF4';
+    }
+    img {
+      border: 0;
+      width: 500px;
+      height: 350px;
+      position:absolute;
+      left:50%;
+      top:50%;
+      margin-left:-250px; /* width의 절반 */
+      margin-top:-175px; /* height의 절반 */
+    }
+</style>
+  </head>
+  <body>
+    <img src = {{ url_for('static', filename = 'loading.gif') }}>
+  </body>       
+</html>

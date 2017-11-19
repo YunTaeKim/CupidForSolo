@@ -1,0 +1,33 @@
+﻿<html>
+  <head>
+    <title>CupidForSolo</title>
+    <style type = 'text/css'>
+    .box{border-style:solid; width:600px; height:380px;}
+    #dashbox{background:white; margin:0px; padding:15px; border-width:5px; border-color:A61458; margin:auto;}
+    @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);  
+    .myfont {font-family: 'Hanna', sans-serif; font-size: 24px; line-height:30px;}
+    </style>
+  </head>
+  <body bgcolor = 'F5FCF4' class = myfont>
+    <center><img src = {{ url_for('static', filename = 'cupid_logo.png') }} width = 500 height = 150 alt = 'logo'></center>
+    <div class = "box" id = "dashbox">
+    <b>결과가 나왔습니다~! <br>
+    {% if pred == 'solo' %}
+    당신의 상대는 지금 남자친구가 없는 상태입니다!!!<br>적극 도전해보세요!<b>
+    {% else %}
+    당신의 상대는 지금 남자친구가 있는 상태입니다...!<br>하지만 포기하지마세요! 제가 틀렸을 수도 있으니까요.<b>
+    {% endif %}
+    <br><br>
+    <div><font size = 2>( {{ prob }} 확신 중..! )</div><br>
+    아! 혹시 시간 괜찮으시면 제가 좀 더 똑똑해 질 수 있게 도와주시겠어요?&nbsp;제가 가지고 있는 데이터가 너무 적어서 제 정답에 확신이 부족해요!&nbsp;
+    조금만 시간을 내서 데이터 수집을 도와주시면 좋겠어요!<br>
+    도와 주시려면 여기를 눌러주세요~!&nbsp;&nbsp; -> &nbsp;&nbsp;
+    <a href = 'https://goo.gl/forms/MBuhW0r811Xy6zMg1'>FeedBack</a>
+    <br><br></font>
+    <form action = {{ url_for('start') }} method = post>
+    <input type = submit value = "다시하기">
+    </form>
+    <au><font size = 1.5 face = '맑은고딕'><b>MADE BY 가천대 응용통계학과 KYT</b></font></au>
+    </div>
+  </body>       
+</html>

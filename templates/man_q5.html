@@ -1,0 +1,29 @@
+﻿<html>
+  <head>
+    <title>CupidForSolo</title>
+    <style type = 'text/css'>
+    .box{border-style:solid; width:600px; height:285px;}
+    #dashbox{background:white; margin:0px; padding:15px; border-width:5px; border-color:A61458; margin:auto;}
+    @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);  
+    .myfont {font-family: 'Hanna', sans-serif; font-size: 24px; line-height:30px;}
+    </style>
+  </head>
+  <body bgcolor = 'F5FCF4' class = myfont>
+    <center><img src = {{ url_for('static', filename = 'cupid_logo.png') }} width = 500 height = 150 alt = 'logo'></center>
+    <div class = "box" id = "dashbox">
+    {% if after  == 1 %}
+      <b>아아 매정한사람..말 걸 시간도 주지 않는군요!<b><br>
+    {% else %}      
+      <b>강의 끝날 때가 다가갈 절호의 찬스네요!!<b><br>
+    {% endif %}
+    <b>아! 혹시 대상이 안경을 착용하고 있나요? <b><br><br>
+    <form action = "/man/q6" method = post>
+      <input type = 'radio' name = glasses value = 0 checked><font size = 2.5 style = "line-height:20px;">&ensp;아니요, 안경을 착용하지 않습니다.<br><br></font>
+      <input type = 'radio' name = glasses value = 1> <font size = 2.5 style = "line-height:20px;">네, 착용하고 있어요.<br><br></font>
+    <br>   
+    <input type = submit value = "대답하기">
+    </form>
+    <au><font size = 1.5 face = 맑은고딕'><b>MADE BY 가천대 응용통계학과 KYT</b></font></au>
+    </div>
+  </body>       
+</html>

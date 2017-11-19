@@ -1,0 +1,29 @@
+﻿<html>
+  <head>
+    <title>CupidForSolo</title>
+    <style type = 'text/css'>
+    .box{border-style:solid; width:600px; height:240px;}
+    #dashbox{background:white; margin:0px; padding:15px; border-width:5px; border-color:A61458; margin:auto;}
+    @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);  
+    .myfont {font-family: 'Hanna', sans-serif; font-size: 24px; line-height:30px;}
+    </style>
+  </head>
+  <body bgcolor = 'F5FCF4' class = myfont>
+    <center><img src = {{ url_for('static', filename = 'cupid_logo.png') }} width = 500 height = 150 alt = 'logo'></center>
+    <div class = "box" id = "dashbox">
+    <b><font size = 5 color = 'red'></font>알고싶은 대상</font>의 성별은 무엇인가요?<b><br><br>
+    <form action = "/gender/check" method = post>
+      <input type = 'radio' name = gender value = 'man' checked><font size = 2.5 style = "line-height:20px;">&nbsp;남성<br><br>
+      <input type = 'radio' name = gender value = 'woman'> <font size = 2.5 style = "line-height:20px;">여성
+    <br>   
+    <br>
+    <br>
+    <br>
+    <input type = submit value = "대답하기">
+    </form>
+    <br>
+    <br>
+    <au><font size = 1.5 face = '맑은고딕'><b>MADE BY 가천대 응용통계학과 KYT</b></font></au>
+    </div>
+  </body>       
+</html>

@@ -1,0 +1,29 @@
+﻿<html>
+  <head>
+    <title>CupidForSolo</title>
+    <style type = 'text/css'>
+    .box{border-style:solid; width:600px; height:285px;}
+    #dashbox{background:white; margin:0px; padding:15px; border-width:5px; border-color:A61458; margin:auto;}
+    @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);  
+    .myfont {font-family: 'Hanna', sans-serif; font-size: 24px; line-height:30px;}
+    </style>
+  </head>
+  <body bgcolor = 'F5FCF4' class = myfont>
+    <center><img src = {{ url_for('static', filename = 'cupid_logo.png') }} width = 500 height = 150 alt = 'logo'></center>
+    <div class = "box" id = "dashbox">
+    {% if ring  == 1 %}
+      <b>반지가 있다니 불안한걸요...!<b><br>
+    {% else %}      
+      <b>반가운 소식이네요!!<b><br>
+    {% endif %}
+    <b>마지막 질문입니다! 핸드폰케이스를 사용 중인가요? <b><br><br>
+    <form action = "/man/loading" method = post>
+      <input type = 'radio' name = case value = 0 checked><font size = 2.5 style = "line-height:20px;">&ensp;아니요, 사용하지 않습니다.<br><br></font>
+      <input type = 'radio' name = case value = 1> <font size = 2.5 style = "line-height:20px;">네, 사용하고 있어요.<br><br></font>
+    <br>   
+    <input type = submit value = "대답하기">
+    </form>
+    <au><font size = 1.5 face = 맑은고딕'><b>MADE BY 가천대 응용통계학과 KYT</b></font></au>
+    </div>
+  </body>       
+</html>

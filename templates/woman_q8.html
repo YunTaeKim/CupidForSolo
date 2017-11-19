@@ -1,0 +1,31 @@
+﻿<html>
+  <head>
+    <title>CupidForSolo</title>
+    <style type = 'text/css'>
+    .box{border-style:solid; width:600px; height:415px;}
+    #dashbox{background:white; margin:0px; padding:15px; border-width:5px; border-color:A61458; margin:auto;}
+    @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);  
+    .myfont {font-family: 'Hanna', sans-serif; font-size: 22px; line-height:30px;}
+    </style>
+  </head>
+  <body bgcolor = 'F5FCF4' class = myfont>
+    <center><img src = {{ url_for('static', filename = 'cupid_logo.png') }} width = 500 height = 150 alt = 'logo'></center>
+    <div class = "box" id = "dashbox">
+    {% if color == 1 %}
+      <b>유채색 옷이 잘 어울리면 보기만해도 기분이 산뜻해지죠~!<b><br>
+    {% else %}
+      <b>검은색 옷이 잘 어울리면 참 세련되보이지 않나요?<b><br>
+    {% endif %}
+    <b>마지막 질문입니다! 지금 그 여성분의 복장이 상당히 편해보이나요?<b></font><br><br>
+    <form action = "/woman/loading" method = post>
+      <input type = 'radio' name = style value = 0 checked><font size = 2.5 style = "line-height:20px;">&ensp;상당히 불편해보이는 옷을 입고 있습니다.<br><br></font>
+      <input type = 'radio' name = style value = 0> <font size = 2.5 style = "line-height:20px;">불편해 보이진 않지만 꽤 신경쓴 듯한 복장입니다.<br><br></font>
+      <input type = 'radio' name = style value = 1> <font size = 2.5 style = "line-height:20px;">상당히 편해 보이는 복장입니다.<br><br></font>
+      <input type = 'radio' name = style value = 1> <font size = 2.5 style = "line-height:20px;">애매한걸요...<br><br></font>
+    <br>   
+    <input type = submit value = "대답하기">
+    </form>
+    <au><font size = 1.5 face = '맑은고딕'><b>MADE BY 가천대 응용통계학과 KYT</b></font></au>
+    </div>
+  </body>       
+</html>

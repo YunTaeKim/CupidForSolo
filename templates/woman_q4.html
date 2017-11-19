@@ -1,0 +1,27 @@
+﻿<html>
+  <head>
+    <title>CupidForSolo</title>
+    <style type = 'text/css'>
+    .box{border-style:solid; width:600px; height:410px;}
+    #dashbox{background:white; margin:0px; padding:15px; border-width:5px; border-color:A61458; margin:auto;}
+    @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);  
+    .myfont {font-family: 'Hanna', sans-serif; font-size: 24px; line-height:30px;}
+    </style>
+  </head>
+  <body bgcolor = 'F5FCF4' class = myfont>
+    <center><img src = {{ url_for('static', filename = 'cupid_logo.png') }} width = 500 height = 150 alt = 'logo'></center>
+    <div class = "box" id = "dashbox">
+    <b>좋아요! 핸드폰의 위치는 그녀의 우선순위를 알 수 있는 중요한 단서가 될거에요!&nbsp;
+    그렇다면, 강의 중 그녀가 주로 바라보는 시선은 어느 방향인가요?<b><br><br>
+    <form action = "/woman/q5" method = post>
+      <input type = 'radio' name = attention value = 0 checked><font size = 2.5 style = "line-height:20px;">&ensp;왼쪽 대각선<br><br></font>
+      <input type = 'radio' name = attention value = 1> <font size = 2.5 style = "line-height:20px;">정면<br><br></font>
+      <input type = 'radio' name = attention value = 0> <font size = 2.5 style = "line-height:20px;">우측 대각선<br><br></font>
+      <input type = 'radio' name = attention value = 0> <font size = 2.5 style = "line-height:20px;">알 수 없는 방향<br><br></font>
+    <br>   
+    <input type = submit value = "대답하기">
+    </form>
+    <au><font size = 1.5 face = '맑은고딕'><b>MADE BY 가천대 응용통계학과 KYT</b></font></au>
+    </div>
+  </body>       
+</html>

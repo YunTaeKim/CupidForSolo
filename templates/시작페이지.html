@@ -1,0 +1,36 @@
+﻿<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CupidForSolo</title>
+    <style type = 'text/css'>
+    .box{border-style:solid; width:600px; height:345px;}
+    #dashbox{background:white; margin:0px; padding:10px; border-width:5px; border-color:A61458; margin:auto;}
+    @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);  
+    .myfont {font-family: 'Hanna', sans-serif; font-size:13.5px; line-height:20px;}
+    </style>
+  </head>
+  <body bgcolor = 'F5FCF4' class = myfont>
+    <center><img src = {{ url_for('static', filename = 'cupid_logo.png') }} width = 500 height = 150 alt = 'logo'></center>
+    <div class = "box" id = "dashbox">
+    안녕하세요! <font size = "4" color = "0399FF" style="line-height:20px;">머신러닝 기반 AI CupidForSolo</font>입니다.<br>
+    수많은 대학생분들이 마음에 드는 이성을 마음 속에만 두고 다가가지 못 하는 현실!<br>
+    마음에 드는 그 이성이 혹여 남자친구는 있지 않을까 여자친구가 있지 않을까하며 망설이고 있다면?<br>
+    그런 분들을 위해 <font color = "red">솔로인가 아닌가</font>를 판단해주고자 제가 왔습니다!<br>
+    대상의 성별을 알려주시고 몇가지 질문에 대답만 해준다면 나머진 제가 판단해드릴게요!</font>
+    <p>다음의 네 단계를 차근차근 따라해주시기만 하면 됩니다.</p>
+    <ol>
+      <li>강의실에서 마음에 드는 이성을 찾는다.</li>
+      <li>질문에 응답할 수 있도록 checklist를 보고 이성을 관찰한다.</li>
+      <li>cupid 프로그램에 응답을 입력하고 결과를 확인한다.</li>
+      <li>솔로임을 확인하고 자신있게 이성에게 다가간다!</li>
+    </ol>
+    <a href = {{ url_for('static', filename = 'checklist.hwp') }}>Check List 확인</a>
+    <br>    
+    <br>
+    </font>
+    <form action = {{ url_for('get_gender_information') }} method = post><input type = "submit" value = "시작하기""> </form>
+
+    <au><font size = 1.5 face = '맑은고딕'><b>MADE BY 가천대 응용통계학과 KYT</b></font></au>
+    </div>
+  </body>       
+</html>
